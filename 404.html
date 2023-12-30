@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>404</title>
+        <style>
+            script {
+            display: none;
+            }
+        </style>
+        </head>
+    <body>
+        <h1>404 : Not Found</h1>
+        <br>
+        <p>Check if you input the correct URL or the resource have been deleted</p>
+    </body>
+    <footer>
+        <p style=" background-color: aqua;color: aliceblue;border: azure;" id="datetime"></p>
+        <script>
+            var currentdate = new Date(); 
+            var datetime = "Last Sync: " + currentdate.getFullYear() + "-"  
+                    + (currentdate.getMonth()+1)  + "-" 
+                    + currentdate.getDate() + " "
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                document.getElementById("datetime").innerHTML = datetime;
+        </script>
+    </footer>
+</html>
