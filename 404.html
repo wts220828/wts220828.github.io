@@ -9,22 +9,10 @@
         <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
         </head>
     <body>
-        <h1>404 : Not Found</h1>
+        <h1>ERR:404_NOT_FOUND</h1>
         <br>
         <p>Check if you input the correct URL or the resource have been deleted</p>
         <p style=" background-color: aqua;color: aliceblue;border: azure;" id="datetime"></p>
-    </body>
-    <footer>
-        <script>
-            var currentdate = new Date(); 
-            var datetime = "Last Sync: " + currentdate.getFullYear() + "-"  
-                    + (currentdate.getMonth()+1)  + "-" 
-                    + currentdate.getDate() + " "
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes() + ":" 
-                    + currentdate.getSeconds();
-                document.getElementById("datetime").innerHTML = datetime;
-        </script>
         <div style="position:fixed;bottom: 5px;left:5px;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="123.5px" height="50px" viewBox="0 0 757.974 306.662" style="enable-background:new 0 0 757.974 306.662;" xml:space="preserve">
                 <style type="text/css">
@@ -89,5 +77,18 @@
                 </g>
                 </svg>
         </div>
+    </body>
+    <footer>
+        <script>
+            var currentdate = new Date(); 
+            var datetime = "Last Sync: " + currentdate.getFullYear() + "-"  
+                    + (currentdate.getMonth()+1)  + "-" 
+                    + currentdate.getDate() + " "
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                document.getElementById("datetime").innerHTML = datetime;
+        </script>
+        
     </footer>
 </html>
