@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/1a3e95a8
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://wts220828.github.io
+  * I am 1a3e95a8 (https://keybase.io/1a3e95a8) on keybase.
+  * I have a public key ASBIwz21SKUfaRDbrTua9sO2HlcxEOhY5N9QeZVvULDedwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012088eb7b27b072aeb60e924ec37a3d31bbb4ddeacf88468002a69384d7f0fb6e5e0a",
+      "host": "keybase.io",
+      "kid": "012048c33db548a51f6910dbad3b9af6c3b61e573110e858e4df5079956f50b0de770a",
+      "uid": "fce50a4939bf68f0bcbcd04ae502a419",
+      "username": "1a3e95a8"
+    },
+    "merkle_root": {
+      "ctime": 1703914016,
+      "hash": "5f162445da74fbf28032f287846ab9fdc490e09d1fd2478ec459a925f479c123f19c62d4104a73b28333c8f3cf94325dec593d25ec567f182bcf0988b74bd3f0",
+      "hash_meta": "f4919c905b293e3cb55d74567f0bfe14a7786ecb9c2b61d937bbbcf600ec37f4",
+      "seqno": 25283664
+    },
+    "service": {
+      "entropy": "uRb5YCGf4VlOHPebV9a/Qc+r",
+      "hostname": "wts220828.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.3"
+  },
+  "ctime": 1703914042,
+  "expire_in": 504576000,
+  "prev": "e567e8ec3201998a320b0ca48094cda394dfb5f2131861a13d36d8687b0db6f6",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSMM9tUilH2kQ2607mvbDth5XMRDoWOTfUHmVb1Cw3ncKp3BheWxvYWTESpcCLMQg5Wfo7DIBmYoyCwykgJTNo5TftfITGGGhPTbYaHsNtvbEINXX3wnyJBgejaipp4vJ5T6KgolyrW3qnDekcTWiberrAgHCo3NpZ8RAE5uYeP3s+z5wUSt21Uw5Qg5n8Fwz7HrIkJiv0omU/nfEjKqzt1+670a7bqJiJjfqxBC0bxT9kVVIghq8dT15DKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGn0g1n0wdbUjITEcWL7yijhdWp7BzLM6Rgou6sXhJODo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/1a3e95a8
+
+==================================================================
