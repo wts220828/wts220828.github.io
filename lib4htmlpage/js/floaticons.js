@@ -62,6 +62,6 @@ document.write("<\/svg>");
 document.write("<\/div>");
 document.write("<script>");
 document.write("    function myFunctionpopdigicert() {");
-document.write("        var myWindow = window.open('https:\/\/www.digicert.com\/help\/?host=wts220828.github.io', 'vdc', 'width=720,height=500');");
+document.write("        var myWindow = window.open('https:\/\/www.digicert.com\/help\/?host='+window.location.hostname, 'vdc', 'width=720,height=500');");
 document.write("    }");
 document.write("<\/script>");
