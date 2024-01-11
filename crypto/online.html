@@ -35,7 +35,7 @@
             function encrypt() {
               var plaintext = document.getElementById("plaintext").value;
               var password = document.getElementById("password").value;
-              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 768,ks: 128,mode: 'ccm',ts: 96}));
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 960,ks: 256,mode: 'ccm',ts: 96}));
               document.getElementById("out").innerHTML = output;
             }
             function decrypt() {
