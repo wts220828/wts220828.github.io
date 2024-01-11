@@ -6,10 +6,15 @@
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="sjcl.js"></script>
+         <script>
+           function onSubmit(token) {
+             document.getElementById("cryptoin").submit();
+           }
+         </script>    
     </head>
     <body>
         <pre> This online crypto application is powered by <a href="https://github.com/bitwiseshiftleft/sjcl">Stanford Javascript Crypto Library (SJCL)</a></pre>
-        <form>
+        <form id="cryptoin">
             <label for="plaintext">Message:</label><br>
             <textarea id="plaintext" name="plaintext" rows="4" cols="50"></textarea>
             <input type="button" value="Clear Input" onclick="javascript:eraseTextPT();"> 
@@ -17,10 +22,10 @@
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password"><br>
             <div class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp"></div>
-            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="encrypt()">Encrypt</button>
-            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="decrypt()">Decrypt</button>
-            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="copyencrypt()">Encrypt & Copy</button>
-            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="copydecrypt()">Decrypt & Copy</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" data-callback="onSubmit" type="button" onclick="encrypt()">Encrypt</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" data-callback="onSubmit" type="button" onclick="decrypt()">Decrypt</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" data-callback="onSubmit" type="button" onclick="copyencrypt()">Encrypt & Copy</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" data-callback="onSubmit" type="button" onclick="copydecrypt()">Decrypt & Copy</button>
             <br>
             <textarea readonly id="out" rows="6" cols="100" style="background-image: url(TamperBG.jpg);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
             <br> 
