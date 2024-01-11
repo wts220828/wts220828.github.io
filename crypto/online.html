@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Web Encryption</title>
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="sjcl.js"></script>
     </head>
     <body>
@@ -15,10 +16,11 @@
             <br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password"><br>
-            <button type="button" onclick="encrypt()">Encrypt</button>
-            <button type="button" onclick="decrypt()">Decrypt</button>
-            <button type="button" onclick="copyencrypt()">Encrypt & Copy</button>
-            <button type="button" onclick="copydecrypt()">Decrypt & Copy</button>
+            <div class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp"></div>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="encrypt()">Encrypt</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="decrypt()">Decrypt</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="copyencrypt()">Encrypt & Copy</button>
+            <button class="g-recaptcha" data-sitekey="6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp" type="button" onclick="copydecrypt()">Decrypt & Copy</button>
             <br>
             <textarea readonly id="out" rows="6" cols="100" style="background-image: url(TamperBG.jpg);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
             <br> 
