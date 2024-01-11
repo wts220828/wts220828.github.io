@@ -2,12 +2,64 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> </title>
+        <title>Web Encryption</title>
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
-        <script src="https://wts220828.github.io/lib4htmlpage/sjcl.js"></script>
+        <script src="sjcl.js"></script>
     </head>
     <body>
-        
+        <pre> This online crypto application is powered by <a href="https://github.com/bitwiseshiftleft/sjcl">Stanford Javascript Crypto Library (SJCL)</a></pre>
+        <form>
+            <label for="plaintext">Message:</label><br>
+            <textarea id="plaintext" name="plaintext" rows="4" cols="50"></textarea>
+            <input type="button" value="Clear Input" onclick="javascript:eraseTextPT();"> 
+            <br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <button type="button" onclick="encrypt()">Encrypt</button>
+            <button type="button" onclick="decrypt()">Decrypt</button>
+            <button type="button" onclick="copyencrypt()">Encrypt & Copy</button>
+            <button type="button" onclick="copydecrypt()">Decrypt & Copy</button>
+            <br>
+            <textarea readonly id="out" rows="6" cols="100" style="background-image: url(TamperBG.jpg);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
+            <br> 
+            <input type="button" value="Clear Output" onclick="javascript:eraseTextOUT();"> 
+        </form>
+
+        <script>
+            function eraseTextPT() {
+              document.getElementById("plaintext").value = "";
+            }
+            function eraseTextOUT() {
+              document.getElementById("out").innerHTML = "";
+            }
+            function encrypt() {
+              var plaintext = document.getElementById("plaintext").value;
+              var password = document.getElementById("password").value;
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 768,ks: 128,mode: 'ccm',ts: 96}));
+              document.getElementById("out").innerHTML = output;
+            }
+            function decrypt() {
+              var plaintext = atob(document.getElementById("plaintext").value);
+              var password = document.getElementById("password").value;
+              var output = sjcl.decrypt(password, plaintext);
+              document.getElementById("out").innerHTML = output;
+            }
+            function copyencrypt() {
+              var plaintext = document.getElementById("plaintext").value;
+              var password = document.getElementById("password").value;
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 768,ks: 128,mode: 'ccm',ts: 96}));
+              document.getElementById("out").innerHTML = output;
+              navigator.clipboard.writeText(output);
+            }
+            function copydecrypt() {
+              var plaintext = atob(document.getElementById("plaintext").value);
+              var password = document.getElementById("password").value;
+              var output = sjcl.decrypt(password, plaintext);
+              document.getElementById("out").innerHTML = output;
+              navigator.clipboard.writeText(output);
+            }
+            
+          </script>
         <script src="https://wts220828.github.io/lib4htmlpage/js/floaticons.js"></script>
         <div style="position:fixed;bottom: 0;right: 100px;opacity: 0.33;font-family: UbuntuMono,serif;font-size: 10px;"> <pre id="deinfo"></pre></div>
         <script>document.getElementById("deinfo").innerHTML =  "Last Sync:"+Date()+"["+window.innerWidth+"x"+window.innerHeight+"] \n"+"UA:"+window.navigator.userAgent</script>
