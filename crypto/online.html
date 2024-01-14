@@ -8,18 +8,18 @@
     </head>
     <body>
         <pre> This online crypto application is powered by <a href="https://github.com/bitwiseshiftleft/sjcl">Stanford Javascript Crypto Library (SJCL)</a></pre>
-        <form>
+        <form id="cryptoin">
             <label for="plaintext">Message:</label><br>
             <textarea id="plaintext" name="plaintext" rows="4" cols="50"></textarea>
             <input type="button" value="Clear Input" onclick="javascript:eraseTextPT();"> 
-            <br>
+            <hr>
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><hr>
             <button type="button" onclick="encrypt()">Encrypt</button>
             <button type="button" onclick="decrypt()">Decrypt</button>
             <button type="button" onclick="copyencrypt()">Encrypt & Copy</button>
             <button type="button" onclick="copydecrypt()">Decrypt & Copy</button>
-            <br>
+            <hr>
             <textarea readonly id="out" rows="6" cols="100" style="background-image: url(TamperBG.jpg);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"></textarea>
             <br> 
             <input type="button" value="Clear Output" onclick="javascript:eraseTextOUT();"> 
@@ -35,7 +35,7 @@
             function encrypt() {
               var plaintext = document.getElementById("plaintext").value;
               var password = document.getElementById("password").value;
-              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 768,ks: 128,mode: 'ccm',ts: 96}));
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 960,ks: 256,mode: 'ccm',ts: 96}));
               document.getElementById("out").innerHTML = output;
             }
             function decrypt() {
