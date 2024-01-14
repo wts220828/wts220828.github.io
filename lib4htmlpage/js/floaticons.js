@@ -1,7 +1,7 @@
 document.write("<style>");
 document.write("    @font-face {");
-document.write("        font-family: JetBrainMono;");
-document.write("        src: url(https:\/\/wts220828.github.io\/font\/JetBrainMono-Regular.woff2);");
+document.write("        font-family: JetBrainsMono;");
+document.write("        src: url(https:\/\/wts220828.github.io\/font\/JetBrainsMono-Regular.woff2);");
 document.write("    }");
 document.write("    @font-face {");
 document.write("        font-family: UbuntuMono;");
