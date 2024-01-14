@@ -5,91 +5,68 @@
         <title> </title>
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
         <style>
-            .box {
-  height: 20px;
-  width: 20px;
-  margin-bottom: 15px;
-  border: 1px solid black;
-}
-
-.red {
-  background-color: #FF0000;
-}
-
-.green {
-  background-color: #00FF00;
-}
-
-.blue {
-  background-color: #0000FF;
-}
-.black {
-    background-color: #000000;
-}
-.white {
-    background-color: #ffffff;
-}
-.grey {
-    background-color: #808080;
-}
-.yellow {
-    background-color: #ffff00;
-}
-.fuchsia {
-    background-color: #ff00ff;
-}
-.aqua {
-    background-color: #00ffff;
-}
-.yellow {
-    background-color: #ffff00;
-}
-.yellow {
-    background-color: #ffff00;
-}
+            table,tbody,tr,td{
+                color: white; border: 1px solid #000; border-radius: 10px;font-family:JetBrainsMono;font-size:16
+            }
         </style>
     </head>
     <body>
-        <table>
-            <tbody>
-                <tr>
-                    <td>#000000</td>
-                    <td><div class="box black"></div></td>
-                </tr>
-                <tr>
-                    <td>#ffffff</td>
-                    <td><div class="box white"></div></td>
-                </tr>
-                <tr>
-                    <td>#808080</td>
-                    <td><div class="box grey"></div></td>
-                </tr>
-                <tr>
-                    <td>#ff0000</td>
-                    <td><div class="box red"></div></td>
-                </tr>
-                <tr>
-                    <td>#00ff00</td>
-                    <td><div class="box green"></div></td>
-                </tr>
-                <tr>
-                    <td>#0000ff</td>
-                    <td><div class="box blue"></div></td>
-                </tr>
-                <tr>
-                    <td>#ffff00</td>
-                    <td><div class="box yellow"></div></td>
-                </tr>
-                <tr>
-                    <td>#ff00ff</td>
-                    <td><div class="box fuchsia"></div></td>
-                </tr>
-                <tr>
-                    <td>#00ffff</td>
-                    <td><div class="box aqua"></div></td>
-                </tr>
-            </tbody>
-        </table>
+        <table style="color: white; border: 1px solid #000; border-radius: 10px;">
+            <tbody><tr>
+            <td style="background:#FFFF00;color:#000000;">#FFFF00
+            </td>
+            <td style="background:#80FF00;color:#000000;">#80FF00
+            </td>
+            <td style="background:#00FF00;">#00FF00
+            </td>
+            <td style="background:#00FF80;">#00FF80
+            </td>
+            <td style="background:#00FFFF;">#00FFFF
+            </td></tr>
+            <tr>
+            <td style="background:#FF8000;">#FF8000
+            </td>
+            <td style="background:#808000;">#808000
+            </td>
+            <td style="background:#008000;">#008000
+            </td>
+            <td style="background:#008080;">#008080
+            </td>
+            <td style="background:#0080FF;">#0080FF
+            </td></tr>
+            <tr>
+            <td style="background:#FF0000;">#FF0000
+            </td>
+            <td style="background:#800000;">#800000
+            </td>
+            <td style="background:#000000;">#000000
+            </td>
+            <td style="background:#000080;">#000080
+            </td>
+            <td style="background:#0000FF;">#0000FF
+            </td></tr>
+            <tr>
+            <td style="background:#FFFFFF;color:#000000;">#FFFFFF
+            </td>
+            <td style="background:#808080;color:#000000;">#808080
+            </td>
+            <td style="background:#800000;">#800000
+            </td>
+            <td style="background:#800080;">#800080
+            </td>
+            <td style="background:#8000FF;">#8000FF
+            </td></tr>
+            <tr>
+            <td style="background:#FFFFFF;color:#000000;">#FFFFFF
+            </td>
+            <td style="background:#FFFFFF;color:#000000;">#FFFFFF
+            </td>
+            <td style="background:#FF0000;">#FF0000
+            </td>
+            <td style="background:#FF0080;">#FF0080
+            </td>
+            <td style="background:#FF00FF;">#FF00FF
+            </td></tr></tbody></table>
         <script src="https://wts220828.github.io/lib4htmlpage/js/floaticons.js"></script>
         <div style="position:fixed;bottom: 0;right: 100px;opacity: 0.33;font-family: UbuntuMono,serif;font-size: 10px;"> <pre id="deinfo"></pre></div>
         <script>document.getElementById("deinfo").innerHTML =  "Last Sync:"+Date()+"["+window.innerWidth+"x"+window.innerHeight+"] \n"+"UA:"+window.navigator.userAgent</script>
