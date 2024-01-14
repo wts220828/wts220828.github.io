@@ -1,11 +1,11 @@
 document.write("<style>");
 document.write("    @font-face {");
-document.write("        font-family: LineFont;");
-document.write("        src: url(https:\/\/wts220828.github.io\/font\/Linefont-Regular.ttf);");
+document.write("        font-family: JetBrainMono;");
+document.write("        src: url(https:\/\/wts220828.github.io\/font\/JetBrainMono-Regular.woff2);");
 document.write("    }");
 document.write("    @font-face {");
 document.write("        font-family: UbuntuMono;");
-document.write("        src: url(https:\/\/wts220828.github.io\/font\/UbuntuMono-Regular.ttf);");
+document.write("        src: url(https:\/\/wts220828.github.io\/font\/UbuntuMono-Regular.woff2);");
 document.write("    }");
 document.write("<\/style>");
 document.write("<script type=\"text\/javascript\" src=\"https:\/\/cdn.ywxi.net\/js\/1.js\" async><\/script>");

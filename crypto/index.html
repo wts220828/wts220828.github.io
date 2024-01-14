@@ -4,12 +4,38 @@
         <meta charset="UTF-8">
         <title> </title>
         <script src="https://wts220828.github.io/lib4htmlpage/js/head-navigationbar.js"></script>
+        <style>
+            table,
+            td {
+                border: 1px solid #333;
+            }
+
+            thead,
+            th,
+            tfoot {
+            background-color: #000;
+                color: #fff;
+            }
+        </style>
     </head>
     <body>
         <div style="font-family: UbuntuMono,serif;">
-            <a href="https://www.cryptool.org/en/cto/openssl"><h1>Web Assembly OpenSSL</h1></a>
-            <a href="https://pgptool.org/"><h1>Online PGP</h1></a>
-            <a href="/crypto/online.html"><h1>Online Message Encrypt/Decrypt by SJCL</h1></a>
+            <table >
+                <tr>
+                    <th colspan="2">Crypto Tools Link</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Outer Link</td>
+                    <td><a href="https://www.cryptool.org/en/cto/openssl"><h1>Web Assembly OpenSSL</h1></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://pgptool.org/"><h1>Online PGP</h1></a></td>
+                </tr>
+                <tr>
+                    <td>Inside Link</td>
+                    <td><a href="/crypto/online.html"><h1>Online Message Encrypt/Decrypt by SJCL</h1></a></td>
+                </tr>
+            </table>
         </div>
         <br>
         <div>
