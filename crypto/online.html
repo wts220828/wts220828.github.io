@@ -6,7 +6,7 @@
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
         <script src="sjcl.js"></script>
     </head>
-    <body style="font-family:JetBrainsMono,serif">
+    <body style="font-family:JetBrainsMono,serif" onload="">
         <pre> This online crypto application is powered by <a href="https://github.com/bitwiseshiftleft/sjcl">Stanford Javascript Crypto Library (SJCL)</a></pre>
         <form id="cryptoin">
             <label for="plaintext">Message:</label><br>
@@ -14,7 +14,8 @@
             <input type="button" value="Clear Input" onclick="javascript:eraseTextPT();"> 
             <hr>
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><hr>
+            <input type="password" id="password" name="password">
+            <p id="hashedpwd"></p><hr>
             <button type="button" onclick="encrypt()">Encrypt</button>
             <button type="button" onclick="decrypt()">Decrypt</button>
             <button type="button" onclick="copyencrypt()">Encrypt & Copy</button>
@@ -67,7 +68,6 @@
               navigator.clipboard.writeText(output);
               document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
             }
-            
           </script>
         <script src="https://wts220828.github.io/lib4htmlpage/js/floaticons.js"></script>
         <div style="position:fixed;bottom: 0;right: 100px;opacity: 0.33;font-family: UbuntuMono,serif;font-size: 10px;"> <pre id="deinfo"></pre></div>
