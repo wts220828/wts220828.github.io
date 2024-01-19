@@ -56,7 +56,7 @@
               var sendDate = (new Date()).getTime();
               var plaintext = document.getElementById("plaintext").value;
               var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",16383);
-              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 9999,ks: 256,mode: 'ccm',ts: 128}));
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 1,ks: 256,mode: 'ccm',ts: 128}));
               document.getElementById("out").innerHTML = output;
               navigator.clipboard.writeText(output);
               document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
