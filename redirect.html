@@ -4,22 +4,25 @@
         <meta charset="UTF-8">
         <title> </title>
         <script src="lib4htmlpage/js/head-navigationbar.js"></script>
-        <script type="text/javascript">
-            var onloadCallback = function() {
-              grecaptcha.render('captchae', {
-                'sitekey' : '6LetqkApAAAAACJ0cNZoVWr9fngQQPQ2t2r5LXWp'
-              });
-            };
-        </script>
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
-        <h1>Redirecting you to outerlink!</h1>
-        <form  action="?" method="get" >
+        <h1>Redirecting you to outer-link!</h1>
+        <form action="javascript:;" onsubmit="myFunction(this)" >
             <label for="furl">Redirecting to:</label>
             <input type="text" id="furl" name="furl"><br>
-            <div id="captchae"></div>
+            <button type="submit">
+                Go!
+            </button>
         </form>
+        <script>
+            function myFunction() {
+                const rurl=document.getElementById("furl")
+                window.location = rurl;
+                window.location.href = rurl;
+                window.location.assign(rurl);
+                window.location.replace(rurl);
+            }
+        </script>
         <script src="https://wts220828.github.io/lib4htmlpage/js/floaticons.js"></script>
         <div style="position:fixed;bottom: 0;right: 100px;opacity: 0.33;font-family: UbuntuMono,serif;font-size: 10px;"> <pre id="deinfo"></pre></div>
         <script>document.getElementById("deinfo").innerHTML =  "Last Sync:"+Date()+"["+window.innerWidth+"x"+window.innerHeight+"] \n"+"UA:"+window.navigator.userAgent</script>
