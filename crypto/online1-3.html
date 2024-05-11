@@ -47,6 +47,7 @@
             function decrypt() {
               var sendDate = (new Date()).getTime();
               var plaintext = atob("eyJpdiI6I"+document.getElementById("plaintext").value);
+              console.log(plaintext);
               var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
               var output = sjcl.decrypt(password, plaintext);
               document.getElementById("out").innerHTML = output;
@@ -64,6 +65,7 @@
             function copydecrypt() {
               var sendDate = (new Date()).getTime();
               var plaintext = atob("eyJpdiI6I"+document.getElementById("plaintext").value);
+              console.log(plaintext);
               var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
               var output = sjcl.decrypt(password, plaintext);
               document.getElementById("out").innerHTML = output;
