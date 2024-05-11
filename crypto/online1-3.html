@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Encryption</title>
+        <script src="lib4htmlpage/js/head-navigationbar.js"></script>
+        <script src="sjcl.js"></script>
+    </head>
+    <body style="font-family:JetBrainsMono,serif" onload="">
+        <pre> This online crypto application is powered by <a href="https://crypto.stanford.edu/sjcl">Stanford Javascript Crypto Library (SJCL)</a></pre>
+        <form id="cryptoin">
+            <label for="plaintext">Message:</label><br>
+            <textarea id="plaintext" name="plaintext" rows="4" cols="50" style="font-family: UbuntuMono, serif"></textarea>
+            <input type="button" value="Clear Input" onclick="javascript:eraseTextPT();"> 
+            <hr>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password">
+            <p id="hashedpwd"></p><hr>
+            <button type="button" onclick="encrypt()">Encrypt</button>
+            <button type="button" onclick="decrypt()">Decrypt</button>
+            <button type="button" onclick="copyencrypt()">Encrypt & Copy</button>
+            <button type="button" onclick="copydecrypt()">Decrypt & Copy</button>
+            <hr>
+            <textarea readonly id="out" rows="6" cols="100" style="background-image: url(TamperBG.jpg);font-family: UbuntuMono, sans-serif;"></textarea>
+            <pre id="timeused"></pre>
+            <br> 
+            <input type="button" value="Clear Output" onclick="javascript:eraseTextOUT();"> 
+            <hr>
+            <pre>2024-05-11-v1.3</pre>
+        </form>
+
+        <script>
+            function eraseTextPT() {
+              document.getElementById("plaintext").value = "";
+            }
+            function eraseTextOUT() {
+              document.getElementById("out").innerHTML = "";
+            }
+            function encrypt() {
+              var sendDate = (new Date()).getTime();
+              var plaintext = document.getElementById("plaintext").value;
+              var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 8192,ks: 256,mode: 'ccm',ts: 128}));
+              document.getElementById("out").innerHTML = output.slice(9);
+              document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
+            }
+            function decrypt() {
+              var sendDate = (new Date()).getTime();
+              var plaintext = atob("eyJpdiI6I"+document.getElementById("plaintext").value);
+              var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
+              var output = sjcl.decrypt(password, plaintext);
+              document.getElementById("out").innerHTML = output;
+              document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
+            }
+            function copyencrypt() {
+              var sendDate = (new Date()).getTime();
+              var plaintext = document.getElementById("plaintext").value;
+              var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
+              var output = btoa(sjcl.encrypt(password, plaintext,{adata: '',iter: 8192,ks: 256,mode: 'ccm',ts: 128}));
+              document.getElementById("out").innerHTML = output;
+              navigator.clipboard.writeText(output);
+              document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
+            }
+            function copydecrypt() {
+              var sendDate = (new Date()).getTime();
+              var plaintext = atob("eyJpdiI6I"+document.getElementById("plaintext").value);
+              var password = sjcl.misc.pbkdf2(document.getElementById("password").value,"eyJpdiI6I",32768);
+              var output = sjcl.decrypt(password, plaintext);
+              document.getElementById("out").innerHTML = output;
+              navigator.clipboard.writeText(output);
+              document.getElementById("timeused").innerHTML = "Time used is: "+((new Date()).getTime()-sendDate).toString(10)+"ms!";
+            }
+          </script>
+        <script src="https://wts220828.github.io/lib4htmlpage/js/floaticons.js"></script>
+        <div style="position:fixed;bottom: 0;right: 100px;opacity: 0.33;font-family: UbuntuMono,serif;font-size: 10px;"> <pre id="deinfo"></pre></div>
+        <script>document.getElementById("deinfo").innerHTML =  "Last Sync:"+Date()+"["+window.innerWidth+"x"+window.innerHeight+"] \n"+"UA:"+window.navigator.userAgent</script>
+    </body>
+</html>
