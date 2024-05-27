@@ -1,0 +1,280 @@
+CPS of wts220828.github.io CA 
+by wts220828.github.io CA Team
+Last Update 20240527 
+---
+
+PKI Participants
+Certification authorities
+The current full list of Certification Authorities that have been authorized by the team to operate is disclosed in http://wts220828.github.io/PKI. 
+Root Certification Authorities
+The Root Certification Authorities used by the PKI are owned by the team and disclosed
+in its CPS. The CPS document and the details about the Roots can be found at
+http://wts220828.github.io/PKI
+Intermediary Certification Authorities
+Intermediate Certification Authorities, also named “Policy Certification Authorities” are used, when
+adequate, to segregate different branch of the Trust Model, by certificate types or CA owner, being totally
+acceptable having Issuing CA directly signed by the Roots.
+The current list of accredited Intermediary CAs, if any, is disclosed the ANNEX B of this document
+and also available at http://wts220828.github.io/PKI.
+Issuing Certification Authorities
+End Entity certificates are issued by a particular “Issuing Certification Authority” that was
+generated under “Root CA” or a particular “Policy CA”, depending on the characteristics of that
+Entity. These Issuing CAs are owned, operated, and disclosed and endorsed by the team to
+act as subordinated Certification Authorities. Each of those Issuing CAs are accredited to issue a certain
+type (or types) of certificates, each conforming to a “Certificate Policy” (CP) approved by the team.
+The current list of accredited Subordinate CAs, and allowed CP, is disclosed at http://wts220828.github.io/PKI.
+
+An applicant is a physical person that requests a certificate for his own behalf or on behalf of a third party.
+The applicant needs to accredit his identity and ability to request a certificate. In the case of an applicant
+acting on behalf of a third party or legal person, he will be requested to accredit the empowerment for such
+representation, as required by law.
+A subscriber is the physical or legal person whose identity is linked to the electronic signature creation
+data, or private key, and included in a digital certificate. In general, a subscriber is considered the “owner”
+of a certificate. The subscriber of a certificate is responsible for the custody of his private key and not
+communicating this data in any way to any other person
+
+Reasons for Revoking a Subscriber Certificate
+A Certification Authority operating in the PKI must revoke within 5 days a certificate that it has issued
+upon the occurrence of any of the following events:
+1. The Subscriber requests in writing that the CA revoke the Certificate;
+2. The Subscriber notifies the CA that the original certificate request was not authorized and does
+not retroactively grant authorization;
+3. The CA obtains evidence that the Subscriber's Private Key corresponding to the Public Key in the
+Certificate suffered a Key Compromise;
+4. The CA is made aware of a demonstrated or proven method that can easily compute the
+Subscriber’s Private Key based on the Public Key in the Certificate; or
+5. The CA obtains evidence that the validation of domain authorization or control for any FullyQualified Domain Name or IP address in the Certificate should not be relied upon.
+A Certification Authority operating in the PKI must revoke within 5 days a certificate that it has issued
+upon the occurrence of any of the following events:
+1. The Certificate no longer complies with the requirements;
+2. The CA obtains evidence that the Certificate was misused;
+3. The CA is made aware that a Subscriber has violated one or more of its material obligations under
+the Subscriber Agreement or Terms of Use;
+4. The CA is made aware of any circumstance indicating that use of a Fully-Qualified Domain Name
+or IP address in the Certificate is no longer legally permitted (e.g. a court or arbitrator has revoked
+a Domain Name Registrant's right to use the Domain Name, a relevant licensing or services
+agreement between the Domain Name Registrant and the Applicant has terminated, or the
+Domain Name Registrant has failed to renew the Domain Name);
+5. The CA is made aware that a Wildcard Certificate has been used to authenticate a fraudulently
+misleading subordinate Fully-Qualified Domain Name;
+6. The CA is made aware of a material change in the information contained in the Certificate;
+7. The CA is made aware that the Certificate was not issued in accordance with these Requirements
+or the CA's Certificate Policy or Certification Practice Statement;
+8. The CA determines or is made aware that any of the information appearing in the Certificate is
+inaccurate;
+9. The CA's right to issue Certificates under these Requirements expires or is revoked or terminated,
+unless the CA has made arrangements to continue maintaining the CRL Repository;
+10. Revocation is required by the CA's Certificate Policy and/or Certification Practice Statement; or
+11. The CA is made aware of a demonstrated or proven method that exposes the Subscriber's Private
+Key to compromise, methods have been developed that can easily calculate it based on the Public
+Key, or if there is clear evidence that the specific method used to generate the Private Key was
+flawed.
+Revocation of SSL Certificates, in particular, will be processed as defined by the requirements published
+by the CA/Browser Forum, as appropriate.
+
+An issuing Certification Authority operating in the PKI will be revoked within 7 days upon the
+occurrence of any of the following events:
+1. The Subordinate CA requests revocation in writing;
+2. The Subordinate CA notifies the Issuing CA that the original certificate request was not authorized
+and does not retroactively grant authorization;
+3. The Issuing CA obtains evidence that the Subordinate CA's Private Key corresponding to the
+Public Key in the Certificate suffered a Key Compromise or no longer complies with the
+requirements;
+4. The Issuing CA obtains evidence that the Certificate was misused;
+5. The Issuing CA is made aware that the Certificate was not issued in accordance with or that
+Subordinate CA has not complied with this document or the applicable Certificate Policy or
+Certification Practice Statement;
+6. The Issuing CA determines that any of the information appearing in the Certificate is inaccurate
+or misleading;
+7. The Issuing CA or Subordinate CA ceases operations for any reason and has not made
+arrangements for another CA to provide revocation support for the Certificate;
+8. The Issuing CA's or Subordinate CA's right to issue Certificates under these Requirements expires
+or is revoked or terminated, unless the Issuing CA has made arrangements to continue
+maintaining the CRL/OCSP Repository;
+9. Revocation is required by the Issuing CA's Certificate Policy and/or Certification Practice
+Statement
+Public key delivery to certificate issuer
+Public keys generated by, or for, the end-entities are sent to the Certification Authority through secure
+channels using the OWGTM Registration Authorities, as part of a certificate request in acceptable formats,
+such as PKCS#10 or other standard CSR format.
+ CA public key delivery to relying parties
+The public keys of all Certification Authorities operating under the PKI Trust Model are published and
+can be freely downloaded from its repository which is located at http://wts220828.github.io/PKI.
+Trusted Root Certificates may be obtained directly from the appropriate repositories in most browsers and
+operating systems.
+
+Key sizes
+The PKI enforces the use of minimum length 2048-bit RSA and ECC NIST P-256, P-384 for key pairs
+at all levels of the hierarchy.
+Hashing algorithms supported are SHA-2 ONLY.
+Public key parameters generation and quality checking
+The algorithm used in the PKI for key generation is RSA or ECC.
+Key usage purposes (as per X.509 v3 key usage field)
+All certificates issued in the PKI contain the “KEY USAGE” and “EXTENDED KEY USAGE” attributes,
+as defined by the X.509v3 standard. More information is available in section 0 and in the appropriate CP
+document.
+
+The CP, the CPS and the operations of the PKI are all governed by the laws of H.K.S.A.R., P.R.CHINA.
+All related parties shall comply with all applicable Hong Kong laws, rules, regulations, ordinances, and
+directives, and all provisions required thereby to be included in this CPS are hereby incorporated herein
+by reference.
+Applicable national laws can affect parties operating Certification Authorities in different jurisdictions.
+
+Personal Certificate:
+ 
+|Validation Level   |OID                |Issuing CA |
+|Indivual Validated |2.23.140.1.5.4.1   |
+|Sponser Validated  |2.23.140.1.5.3.1   |
+
+It is not allowed to include non-verified information in any field or extension of a certificate.
+
+
+Contact Person:
+mailto:s220828@wtsmc.edu.hk
+HONG KONG
+
+Annex A: Glossary
+AATL Adobe Approved Trust List
+CA Certificate Authority or Certification Authority
+CAA Certification Authority Authorization
+CMS Card Management System
+CP Certificate Policy
+CPS Certification Practice Statement
+CRL Certificate Revocation List
+CSR Certificate Signing Request
+CT Certificate Transparency
+DBA Doing Business As (also known as "Trading As")
+DV Domain Validated
+ETSI European Telecommunications Standards Institute
+EU European Union
+FIPS (US Government) Federal Information Processing Standard FQDN Fully Qualified Domain Name
+FTP File Transfer Protocol
+HISP Health Information Service Provider
+HK(SAR) Hong Kong Special Administrative Region
+HTTP Hypertext Transfer Protocol
+IANA Internet Assigned Numbers Authority
+ICANN Internet Corporation for Assigned Names and Numbers IdM Identity Management System
+IDN Internationalized Domain Name
+ISSO Information System Security Officer (also CSO, Chief Security Officer)
+IETF Internet Engineering Task Force
+IGTF International Grid Trust Federation
+ITU International Telecommunication Union
+IV Individual Validated
+MICS Member‐Integrated Credential Service (IGTF) NIST National Institute of Standards and Technology
+OCSP Online Certificate Status Protocol
+OID Object Identifier
+PIN Personal Identification Number (e.g. a secret access code)
+PKI Public Key Infrastructure
+PKIX IETF Working Group on Public Key Infrastructure
+RA Registration Authority
+RFC Request for Comments (at IETF.org)
+SAN Subject Alternative Name
+SHA Secure Hashing Algorithm
+SSL Secure Sockets Layer
+TLD Top‐Level Domain
+TLS Transport Layer Security
+TSA Time Stamping Authority
+TST Time‐Stamp Token
+TTL Time To Live
+UTC Coordinated Universal Time
+X.509 The ITU‐T standard for Certificates and their corresponding authentication framework
+
+ANNEX B:
+
+Root CA certificates
+a. basicConstraints (SHALL be present)
+This extension SHALL be marked critical. The cA field SHALL be set true. The
+pathLenConstraint field SHOULD NOT be present.
+b. keyUsage (SHALL be present)
+This extension SHALL be marked critical. Bit positions for keyCertSign and cRLSign
+SHALL be set. 
+c. certificatePolicies (SHOULD NOT be present)
+This extension SHOULD NOT be present.
+d. extKeyUsage (SHALL NOT be present)
+This extension SHALL NOT be present.
+e. subjectKeyIdentifier (SHALL be present)
+This extension SHALL NOT be marked critical. It SHALL contain a value that is included in
+the keyIdentifier field of the authorityKeyIdentifier extension in Certificates
+issued by the Root CA.
+Subordinate CA certificates
+The issuance of end entity S/MIME Certificates by Extant S/MIME CAs is described in Appendix B.
+a. certificatePolicies (SHALL be present)
+This extension SHOULD NOT be marked critical.
+All policyIdentifiers included in this extension SHALL be included in accordance.
+If the value of this extension includes a PolicyInformation which contains a qualifier of
+type id-qt-cps (OID: 1.3.6.1.5.5.7.2.1), then the value of the qualifier SHALL be a HTTP or
+HTTPS URL for the Issuing CA’s CP and/or CPS, Relying Party Agreement, or other pointer to
+online policy information provided by the Issuing CA. If a qualifier of type id-qt-unotice
+(OID: 1.3.6.1.5.5.7.2.2) is included, then it SHALL contain explicitText and SHALL NOT contain noticeRef.
+b. cRLDistributionPoints (SHALL be present)
+This extension SHALL NOT be marked critical. It SHALL contain the HTTP URL of the CA’s CRL service.
+c. authorityInformationAccess (SHOULD be present)
+This extension SHALL NOT be marked critical.
+It SHOULD contain the HTTP URL of the Issuing CA Certificate (accessMethod =
+1.3.6.1.5.5.7.48.2).
+d. basicConstraints (SHALL be present)
+This extension SHALL be marked critical. The cA field SHALL be set true. The
+pathLenConstraint field MAY be present.
+e. keyUsage (SHALL be present)
+This extension SHALL be marked critical. Bit positions for keyCertSign and cRLSign
+SHALL be set.
+f. nameConstraints (MAY be present)
+This extension SHOULD be marked critical
+.
+g. extKeyUsage (MAY be present for Cross Certificates; SHALL be present otherwise)
+For Cross Certificates that share a Subject Distinguished Name and Subject Public Key with a
+Root CA Certificate operated in accordance with these Requirements, this extension MAY be
+present. If present, this extension SHOULD NOT be marked critical. This extension SHALL
+only contain usages for which the Issuing CA has verified the Cross Certificate is authorized
+to assert. This extension SHALL NOT contain the anyExtendedKeyUsage usage.
+For all other Subordinate CA Certificates, including Technically Constrained Subordinate CA
+Certificates, this extension SHALL be present and SHOULD NOT be marked critical2
+.
+For Subordinate CA Certificates that will be used to issue S/MIME Certificates, the value
+id-kp-emailProtection SHALL be present. The values id-kp-serverAuth,
+id-kp-codeSigning, id-kp-timeStamping, and anyExtendedKeyUsage SHALL NOT
+be present. Other values MAY be present.
+h. authorityKeyIdentifier (SHALL be present)
+This extension SHALL NOT be marked critical. It SHALL contain a keyIdentifier field and
+it SHALL NOT contain a authorityCertIssuer or authorityCertSerialNumber field.
+i. subjectKeyIdentifier (SHALL be present)
+This extension SHALL NOT be marked critical. It SHALL contain a value that is included in
+the keyIdentifier field of the authorityKeyIdentifier extension in Certificates
+issued by the Subordinate CA.
+Subscriber certificates
+a. certificatePolicies (SHALL be present)
+This extension SHOULD NOT be marked critical. It SHALL include exactly one of the
+reserved policyIdentifiers listed in Section 7.1.6.1, and MAY contain one or more
+identifiers documented by the CA in its CP and/or CPS.
+If the value of this extension includes a PolicyInformation which contains a qualifier of
+type id-qt-cps (OID: 1.3.6.1.5.5.7.2.1), then the value of the qualifier SHALL be a HTTP or
+HTTPS URL for the Issuing CA’s CP and/or CPS, Relying Party Agreement, or other pointer to
+online policy information provided by the Issuing CA. If a qualifier of type id-qt-unotice
+(OID: 1.3.6.1.5.5.7.2.2) is included, then it SHALL contain explicitText and SHALL NOT
+contain noticeRef.
+b. cRLDistributionPoints (SHALL be present)
+This extension SHOULD NOT be marked critical. It SHALL contain at least one
+distributionPoint whose fullName value includes a GeneralName of type
+uniformResourceIdentifier that includes a URI where the Issuing CA’s CRL can be
+retrieved.
+d. basicConstraints (optional)
+This extension MAY be present. The cA field SHALL NOT be true. pathLenConstraint
+field SHALL NOT be present.
+e. keyUsage (SHALL be present)
+This extension SHOULD be marked critical.
+Other bit positions SHALL NOT be set.
+f. extKeyUsage (SHALL be present)
+The values id-kp-serverAuth, id-kp-codeSigning, id-kp-timeStamping, and
+anyExtendedKeyUsage SHALL NOT be present.
+g. authorityKeyIdentifier (SHALL be present)
+This extension SHALL NOT be marked critical. The keyIdentifier field SHALL be
+present. authorityCertIssuer and authorityCertSerialNumber fields SHALL NOT
+be present.
+h. subjectAlternativeName (SHALL be present)
+This extension SHOULD NOT be marked critical unless the subject field is an empty
+sequence.
+i. smimeCapabilities (optional)
+This extension MAY be present and SHALL NOT be marked critical. May indicate
+cryptographic capabilities of the sender of a signed S/MIME message.
+
+---END---
