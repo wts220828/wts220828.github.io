@@ -9,6 +9,7 @@ document.write("        src: url(https:\/\/wts220828.github.io\/font\/UbuntuMono
 document.write("    }");
 document.write("<\/style>");
 document.write("<script type=\"text\/javascript\" src=\"https:\/\/cdn.ywxi.net\/js\/1.js\" async><\/script>");
+/*
 document.write("<div style=\"position:fixed;bottom: 5px;left:5px;border: none;cursor: pointer;background-color: rgba(0,0,0,0);\" onclick=\"myFunctionpopdigicert()\">");
 document.write("<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" version=\"1.1\" id=\"Layer_1\" x=\"0px\" y=\"0px\" width=\"123.5px\" height=\"50px\" viewBox=\"0 0 757.974 306.662\" style=\"enable-background:new 0 0 757.974 306.662;\" xml:space=\"preserve\">");
 document.write("    <style type=\"text\/css\">");
@@ -65,3 +66,4 @@ document.write("    function myFunctionpopdigicert() {");
 document.write("        var myWindow = window.open('https:\/\/www.digicert.com\/help\/?host='+window.location.hostname, 'vdc', 'width=720,height=500');");
 document.write("    }");
 document.write("<\/script>");
+*/
