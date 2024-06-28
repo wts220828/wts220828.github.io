@@ -1,0 +1,142 @@
+M:=MUST included
+N:=MUST NOT
+S:=SHOULD
+
+Private
+
+Root CA
+[Version]
+3
+[Subject]
+CN:M
+O:M
+C:S 
+[SubjectKeyIdentifier]
+Critical:N
+160-bit hash
+[KeyUsage]
+Critical:M
+Certificate Signing
+Digital Signature
+(Off-line) CRL Signing
+[BasicConstraints]
+Critical:M
+Subject Type=CA
+Path Length Constraint=0
+[Certificate Policy]
+Critical:N
+Policy Identifier=2.23.140.1.3
+[ExtendedKeyUsage]
+Critical:N
+2.5.29.32.0(AnyPolicy)
+
+---
+
+TLS Sub CA 
+[Version]
+3
+[Subject]
+CN:M
+O:M
+C:S 
+[SubjectKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityInformationAccess]
+1.3.6.1.5.5.7.48.2: URI : Root CA web access
+[CRLDistributionPoints]
+URI : Root CA Web CRL Access
+[KeyUsage]
+Critical:M
+Certificate Signing
+Digital Signature
+(Off-line) CRL Signing
+[BasicConstraints]
+Critical:M
+Subject Type=CA
+Path Length Constraint=0
+[Certificate Policy]
+Critical:N
+Policy Identifier=2.23.140.1.3
+[ExtendedKeyUsage]
+Critical:N
+1.3.6.1.5.5.7.3.1 (TLS WWW Server)
+1.3.6.1.5.5.7.3.2 (TLS WWW Client)
+
+-
+
+CodeSigning Sub CA
+[Version]
+3
+[Subject]
+CN:M
+O:M
+C:S 
+[SubjectKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityInformationAccess]
+1.3.6.1.5.5.7.48.2: URI : Root CA web access
+[CRLDistributionPoints]
+URI : Root CA Web CRL Access
+[KeyUsage]
+Critical:M
+Certificate Signing
+Digital Signature
+(Off-line) CRL Signing
+[BasicConstraints]
+Critical:M
+Subject Type=CA
+Path Length Constraint=0
+[Certificate Policy]
+Critical:N
+Policy Identifier=2.23.140.1.3
+Policy Identifier=1.3.6.1.4.1.4146.1.2
+[ExtendedKeyUsage]
+Critical:N
+1.3.6.1.5.5.7.3.3 (CodeSigning)
+1.3.6.1.4.1.311.10.3.5 (WHQL Crypto)
+1.3.6.1.4.1.311.10.3.5.1 (WHQL attestation)
+1.3.6.1.4.1.311.10.3.7 (WHQL OEM Crypto)
+
+-
+
+S/MIME Sub CA
+CN:M
+O:M
+C:S 
+[SubjectKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityKeyIdentifier]
+Critical:N
+160-bit hash
+[AuthorityInformationAccess]
+1.3.6.1.5.5.7.48.2: URI : Root CA web access
+[CRLDistributionPoints]
+URI : Root CA Web CRL Access
+[KeyUsage]
+Critical:M
+Certificate Signing
+Digital Signature
+(Off-line) CRL Signing
+[BasicConstraints]
+Critical:M
+Subject Type=CA
+Path Length Constraint=0
+[Certificate Policy]
+Critical:N
+Policy Identifier=2.23.140.1.3
+[ExtendedKeyUsage]
+Critical:N
+emailProtection
+
+Document Signing CA
+
+
